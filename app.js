@@ -7,7 +7,7 @@ var querystring = require('querystring')
 
 var client_id = process.env.CLIENT_ID // your clientId
 var client_secret = process.env.CLIENT_SECRET // Your secret
-var redirect_uri = 'http://localhost:3001/api/callback' // Your redirect uri
+var redirect_uri = '/api/callback' // Your redirect uri
 
 var app = express()
 
