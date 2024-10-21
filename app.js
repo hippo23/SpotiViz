@@ -7,7 +7,7 @@ var querystring = require('querystring')
 
 var client_id = process.env.CLIENT_ID // your clientId
 var client_secret = process.env.CLIENT_SECRET // Your secret
-var redirect_uri = '/api/callback' // Your redirect uri
+var redirect_uri = 'http://localhost:3001/api/callback' // Your redirect uri
 
 var app = express()
 
@@ -97,7 +97,7 @@ app.get('/api/refresh_token', function (req, res) {
 
 app.get('/api/get_top_tracks', (req, res) => {
   const access_token = req.query.token
-  const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks`
+  const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?limit=50`
 
   var requestOptions = {
     url: TOP_TRACKS_ENDPOINT,
@@ -141,7 +141,7 @@ app.get('/api/get_top_artists', (req, res) => {
 
 app.get('/api/get_saved_albums', (req, res) => {
   const access_token = req.query.token
-  const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/albums`
+  const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/albums?limit=50`
 
   var requestOptions = {
     url: TOP_TRACKS_ENDPOINT,

@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "build:ui": "rm -rf dist && cd ../spotify_visualizer/ && npm run build && mv dist ../spotify_viz_backend"
   },
   "author": "Simon Magleo",
