@@ -7,7 +7,8 @@ var querystring = require('querystring')
 
 var client_id = process.env.CLIENT_ID // your clientId
 var client_secret = process.env.CLIENT_SECRET // Your secret
-var redirect_uri = '/api/callback' // Your redirect uri
+var redirect_uri =
+  'https://quiet-cliffs-95340-020be6433d7c.herokuapp.com/api/callback' // Your redirect uri
 
 var app = express()
 
